@@ -6,3 +6,6 @@ ehthumbs.db
 $RECYCLE.BIN/
 .Spotlight-V100/
 .Trashes/
+
+# このリポジトリのプロジェクト設定は保存しない (二重管理を避けるため)
+.vscode/*

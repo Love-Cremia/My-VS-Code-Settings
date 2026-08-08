@@ -1,0 +1,57 @@
+/* プレビュー全体で全カウンタを初期化 */
+.vscode-body {
+  counter-reset: h1-counter h2-counter h3-counter h4-counter h5-counter h6-counter;
+}
+
+/* h1 */
+.vscode-body h1 {
+  counter-increment: h1-counter;
+  counter-reset: h2-counter h3-counter h4-counter h5-counter h6-counter;
+}
+.vscode-body h1::before {
+  content: counter(h1-counter) ". ";
+}
+
+/* h2 */
+.vscode-body h2 {
+  counter-increment: h2-counter;
+  counter-reset: h3-counter h4-counter h5-counter h6-counter;
+}
+.vscode-body h2::before {
+  content: counter(h1-counter) "." counter(h2-counter) ". ";
+}
+
+/* h3 */
+.vscode-body h3 {
+  counter-increment: h3-counter;
+  counter-reset: h4-counter h5-counter h6-counter;
+}
+.vscode-body h3::before {
+  content: counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) ". ";
+}
+
+/* h4 */
+.vscode-body h4 {
+  counter-increment: h4-counter;
+  counter-reset: h5-counter h6-counter;
+}
+.vscode-body h4::before {
+  content: counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) ". ";
+}
+
+/* h5 */
+.vscode-body h5 {
+  counter-increment: h5-counter;
+  counter-reset: h6-counter;
+}
+.vscode-body h5::before {
+  content: counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) ". ";
+}
+
+/* h6 */
+.vscode-body h6 {
+  counter-increment: h6-counter;
+}
+.vscode-body h6::before {
+  content: counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) "." counter(h6-counter) ". ";
+}
