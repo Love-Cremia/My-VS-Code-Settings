@@ -1,5 +1,10 @@
 {
-  "markdown.styles": [
-    ".vscode/markdown-preview-numbering.css"
-  ]
+    // Markdown 標準プレビューでナンバリング
+    "markdown.styles": [
+        ".vscode/markdown-preview-numbering.css"
+    ],
+
+    // markdownlint のユーザ設定
+    "markdownlint.configFile": "~/Library/Application Support/Code/User/.markdownlint.json",
+
 }
