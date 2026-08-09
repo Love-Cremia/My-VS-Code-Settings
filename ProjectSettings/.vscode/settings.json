@@ -3,13 +3,8 @@
     "markdown.styles": [
         "./.vscode/markdown-preview-numbering.css"
     ],
-    /*
-        textlint の独自設定
-        .run を onType にしておくことで，逐一検査を行って1回の上書き保存で textlint による修正まで実行できる．
-        ただし1文字打つごとに処理が走るので，重い場合は "onSave" に変更する．
-        その場合は1回目の保存で markdownlint によるフォーマットとtextlintによる問題検知までが実行され，
-        2回目の保存で textlint による修正が実行される
-    */
+
+    // textlint の設定
     "textlint.run": "onType",
     "textlint.autoFixOnSave": true,
     "textlint.languages": [

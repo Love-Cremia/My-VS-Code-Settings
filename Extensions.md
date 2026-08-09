@@ -99,7 +99,7 @@ npm install --save-dev textlint textlint-rule-preset-ja-spacing
 このうち，**node_modules は非常に膨大になるので必ず gitignore の対象にすること**．
 一方 package, package-lock は複数の PC で環境を揃えるのに必要であるから，原則 Git でコミットすること．
 
-#### package-lock.json がある場合
+#### package.json, package-lock.json が両方ある場合
 
 以下のコマンドを実行：
 
@@ -109,25 +109,31 @@ npm ci
 
 ### 設定ファイル
 
-ルートディレクトリに `.textlintrc.json` を作成し，以下を記述する．
+ルートディレクトリに `.textlintrc.json` を作成し，[このファイルの内容](./.textlintrc.json)を記述する．
 なおこのファイルはコメントに対応しているので，**拡張子は `.json` のままでコメントを書いてよい**らしい．
+
+### 検知・修正を有効化する
+
+ユーザまたはプロジェクトの settings.json に以下の設定を追記する：
 
 ```json
 {
-    "rules": {
-        "preset-ja-spacing": {
-            "ja-space-between-half-and-full-width": {
-                "space": "always"
-            },
-            "ja-no-space-around-parentheses": true,
-            "ja-space-around-code": {
-                "before": true,
-                "after": true
-            }
-        }
-    }
+    // textlint の設定
+    "textlint.run": "onType",
+    "textlint.autoFixOnSave": true,
+    "textlint.languages": [
+        "markdown"
+    ]
 }
 ```
+
+"textlint.autoFixOnSave" を true にしておくと，保存時に検出済みの箇所を修正してくれる．
+また textlint.run の値を "onType" にしておくと，文字を打つたびに検知が走る．
+そのため上記の組み合わせの場合，(めちゃくちゃ速く操作しない限りは) 1 回の上書き保存でフォーマットが終了する．
+
+タイプするたびに検知されるのが困る場合は，"textlint.run" を "onSave" にするとよい．
+こうすると検知はファイルを上書き保存したときにのみ実行される．
+したがって 2 回上書き保存しないとフォーマットされない．
 
 ### 設定ファイルやデフォルトモジュールの場所を変える方法
 
