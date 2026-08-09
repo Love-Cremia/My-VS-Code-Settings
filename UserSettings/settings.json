@@ -1,0 +1,69 @@
+{
+    "workbench.editor.enablePreview": false,
+    "workbench.preferredLightColorTheme": "Dark 2026",
+    "chat.viewSessions.orientation": "stacked",
+    "editor.minimap.enabled": false,
+    "update.showReleaseNotes": false,
+    "editor.hover.enabled": "onKeyboardModifier",
+
+    // 保存時に最終行を自動で追加する
+    "files.insertFinalNewline": true,
+    // 保存時に余計な末尾改行を除去する
+    "files.trimFinalNewlines": true,
+    // 行末のスペースやスペースだけの行があるとき，余計なスペースをトリムする
+    "files.trimTrailingWhitespace": true,
+
+    // Markdownの整形設定
+    "[markdown]": {
+        // 保存時に余計な末尾改行を除去する設定
+        // markdownlint のルールで縛るのでVS Codeでは設定しない
+        // これが true だと行末の2個スペースも削除されて少々困るため
+        "files.trimTrailingWhitespace": false,
+
+        // markdownlintによって指定されるのでVS Code側ではいったん設定しない
+        // "editor.tabSize": 4,
+
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.markdownlint": "explicit"
+        }
+    },
+    // markdownlint のユーザ設定
+    "markdownlint.configFile": "~/Library/Application Support/Code/User/.markdownlint.json",
+
+    // JSONの整形設定
+    "[json]": {
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true
+    },
+    "[jsonc]": {
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true
+    },
+    // JSON ファイルの整形時に、空行があっても保持する
+    "json.format.keepLines": true,
+
+
+    // 空白文字の表示設定
+    // boundary は単語の境界にある空白以外を表示する
+    // インデントのスペースも写っちゃうから気が散るかも？　適宜変更
+    "editor.renderWhitespace": "boundary",
+
+
+    // 全角スペースや特殊な空白文字を強調表示する
+    "editor.unicodeHighlight.invisibleCharacters": true,
+
+    // 紛らわしい全角記号 (全角カンマや全角セミコロン等) を強調表示する
+    "editor.unicodeHighlight.ambiguousCharacters": true,
+
+    // 日本語の文字列（"..."の中身）までハイライトされないようにする
+    "editor.unicodeHighlight.includeStrings": false,
+
+    // 日本語テキスト全体がハイライトされるのを防ぐ
+    "editor.unicodeHighlight.nonBasicASCII": false,
+
+    // インデントの自動検出を無効化する
+    // これにより既存JSONファイルでも，本ファイルで指定しているように規定インデントを4個スペースにできる
+    "editor.detectIndentation": false
+}
