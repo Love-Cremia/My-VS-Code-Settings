@@ -9,3 +9,6 @@ $RECYCLE.BIN/
 
 # このリポジトリのプロジェクト設定は保存しない (二重管理を避けるため)
 .vscode/*
+
+# node_modules ディレクトリを無視する
+node_modules/
