@@ -75,5 +75,10 @@
 
     // インデントの自動検出を無効化する
     // これにより既存JSONファイルでも，本ファイルで指定しているように規定インデントを4個スペースにできる
-    "editor.detectIndentation": false
+    "editor.detectIndentation": false,
+
+    // エクスプローラに表示しないもの
+    "files.exclude": {
+        "**/.venv": true
+    }
 }
