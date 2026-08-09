@@ -16,15 +16,8 @@
 
 ### 設定値ファイルの準備
 
-- `./.vscode/` に `.markdownlint.jsonc` を作成する
-  (yaml, json, jsonc に対応している．コメントしたいので jsonc)
-- プロジェクトの settings.json に以下を記述する：
-
-    ```json
-    {
-        "markdownlint.configFile": ".vscode/.markdownlint.jsonc"
-    }
-    ```
+- プロジェクトルートに `.markdownlint.jsonc` を作成する
+  (yaml, json, jsonc に対応している．コメントしたいので jsonc を使おう)
 
 - ユーザ設定で全プロジェクト共通の設定をしたいときは，以下のようにする：
     1. どこかに `.markdownlint.jsonc` を置く．
@@ -36,6 +29,17 @@
             "markdownlint.configFile": "~/Library/Application Support/Code/User/.markdownlint.json"
         }
         ```
+
+- プロジェクト用の markdownlint の設定ファイルをプロジェクトルート以外に置きたい場合，プロジェクトの settings.json に以下を記述すれば対応できる：
+
+    ```json
+    {
+        "markdownlint.configFile": ".vscode/.markdownlint.jsonc"
+    }
+    ```
+
+    ただしこれは非推奨．
+    ツール側の標準仕様 (Convention over Configuration) に従い，プロジェクトルートに置くほうが好ましい．
 
 ### 設定値ファイルの書き方
 
