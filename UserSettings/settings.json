@@ -30,7 +30,7 @@
         }
     },
     // markdownlint のユーザ設定
-    "markdownlint.configFile": "~/Library/Application Support/Code/User/.markdownlint.json",
+    "markdownlint.configFile": "~/Library/Application Support/Code/User/.markdownlint.jsonc",
 
     // JSONの整形設定
     "[json]": {

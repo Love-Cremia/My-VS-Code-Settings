@@ -4,7 +4,7 @@
         ".vscode/markdown-preview-numbering.css"
     ],
 
-    // markdownlint のユーザ設定
-    "markdownlint.configFile": "~/Library/Application Support/Code/User/.markdownlint.json",
+    // markdownlint の設定
+    "markdownlint.configFile": ".vscode/.markdownlint.jsonc",
 
 }
