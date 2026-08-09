@@ -12,3 +12,7 @@ $RECYCLE.BIN/
 
 # node_modules ディレクトリを無視する
 node_modules/
+
+# Unique to this project
+## sync command 用のバックアップフォルダ
+UserSettings/Backup/

@@ -21,7 +21,8 @@
         "files.trimTrailingWhitespace": false,
 
         // markdownlintによって指定されるのでVS Code側ではいったん設定しない
-        // "editor.tabSize": 4,
+        // 訂正．これを入れないとタブ入力したときスペースが2個になってしまうことがあるので明示する
+        "editor.tabSize": 4,
 
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
         "editor.formatOnSave": true,
