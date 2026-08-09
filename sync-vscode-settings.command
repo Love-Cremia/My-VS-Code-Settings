@@ -3,9 +3,8 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 VSCODE_SETTINGS="$HOME/Library/Application Support/Code/User/settings.json"
 PROJECT_DIR="$SCRIPT_DIR/UserSettings"
 BACKUP_DIR="$PROJECT_DIR/Backup"
-TEMP_DIR="$SCRIPT_DIR/temporary"
 
-mkdir -p "$BACKUP_DIR" "$TEMP_DIR"
+mkdir -p "$BACKUP_DIR"
 
 if [ -f "$PROJECT_DIR/my-settings.jsonc" ]; then
   PROJECT_SETTINGS="$PROJECT_DIR/my-settings.jsonc"

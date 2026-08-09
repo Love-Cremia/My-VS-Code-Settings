@@ -14,5 +14,5 @@ $RECYCLE.BIN/
 node_modules/
 
 # Unique to this project
-temporary/
+## sync command 用のバックアップフォルダ
 UserSettings/Backup/
