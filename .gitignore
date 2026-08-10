@@ -10,7 +10,14 @@ $RECYCLE.BIN/
 # このリポジトリのプロジェクト設定は保存しない (二重管理を避けるため)
 .vscode/*
 
-# node_modules ディレクトリを無視する
+# このリポジトリで作業するとき用の textlint 関係
+# ※一般のリポジトリではむしろ ignore してはならないが，
+# ここでは ProjectSettings の中に設定を置くので例外的に ignore する
+/package.json
+/package-lock.json
+/.textlintrc.json
+
+# textlintのモジュール
 node_modules/
 
 # Unique to this project
