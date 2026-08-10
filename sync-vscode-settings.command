@@ -7,13 +7,7 @@ BACKUP_DIR="$PROJECT_DIR/Backup"
 
 mkdir -p "$BACKUP_DIR"
 
-if [ -f "$PROJECT_DIR/my-settings.jsonc" ]; then
-  PROJECT_SETTINGS="$PROJECT_DIR/my-settings.jsonc"
-elif [ -f "$PROJECT_DIR/my-settings.json" ]; then
-  PROJECT_SETTINGS="$PROJECT_DIR/my-settings.json"
-else
-  PROJECT_SETTINGS="$PROJECT_DIR/my-settings.jsonc"
-fi
+PROJECT_SETTINGS="$PROJECT_DIR/my-settings.jsonc"
 
 PROJECT_MARKDOWNLINT="$PROJECT_DIR/.markdownlint.jsonc"
 
