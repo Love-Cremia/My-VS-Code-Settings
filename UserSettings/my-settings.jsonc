@@ -38,7 +38,7 @@
 
     // markdownlint のユーザ設定
     // この settings.json と同じ場所
-    "markdownlint.configFile": "~/Library/Application Support/Code/User/settings.json",
+    "markdownlint.configFile": "~/Library/Application Support/Code/User/.markdownlint.jsonc",
 
     // textlint の設定
     "textlint.run": "onType",
