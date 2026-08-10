@@ -13,23 +13,29 @@
     // 行末のスペースやスペースだけの行があるとき，余計なスペースをトリムする
     "files.trimTrailingWhitespace": true,
 
-    // Markdownの整形設定
+
+    // Markdownファイル向けの設定
     "[markdown]": {
-        // 保存時に余計な末尾改行を除去する設定
-        // markdownlint のルールで縛るのでVS Codeでは設定しない
-        // これが true だと行末の2個スペースも削除されて少々困るため
+        // 行末スペース（改行）を勝手に消されないよう保護
         "files.trimTrailingWhitespace": false,
 
-        // markdownlintによって指定されるのでVS Code側ではいったん設定しない
-        // 訂正．これを入れないとタブ入力したときスペースが2個になってしまうことがあるので明示する
+        // インデント幅を 4 スペースに固定
         "editor.tabSize": 4,
 
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+        // 保存時フォーマット（テーブル整形等）は Markdown All in One に任せる
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
         "editor.formatOnSave": true,
+
+        // markdownlint の強固な自動修正は codeActionsOnSave で保存時に強制実行する
         "editor.codeActionsOnSave": {
             "source.fixAll.markdownlint": "explicit"
         }
     },
+
+    // Markdown All in One のテーブルフォーマットを有効化
+    "markdown.extension.tableFormatter.enabled": true,
+
+
     // markdownlint のユーザ設定
     "markdownlint.configFile": "~/Library/Application Support/Code/User/.markdownlint.jsonc",
 
@@ -81,5 +87,11 @@
     // エクスプローラに表示しないもの
     "files.exclude": {
         "**/.venv": true
-    }
+    },
+
+
+    // VS Code のフォント設定
+    "editor.fontFamily": "'Hiragino Sans Mono', 'Osaka-Mono', monospace",
+    "editor.experimental.graphemeClusters": true
+
 }
