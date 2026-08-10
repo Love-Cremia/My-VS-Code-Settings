@@ -37,7 +37,7 @@
 
 
     // markdownlint のユーザ設定
-    "markdownlint.configFile": "~/Library/Application Support/Code/User/.markdownlint.jsonc",
+    "markdownlint.configFile": "~/VS-Code/markdownlint/.markdownlint.jsonc",
 
     // textlint の設定
     "textlint.nodePath": "/Users/mos-burger/VS-Code/textlint/node_modules",
