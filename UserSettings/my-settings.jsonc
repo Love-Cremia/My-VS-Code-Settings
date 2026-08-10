@@ -41,8 +41,6 @@
     "markdownlint.configFile": "~/Library/Application Support/Code/User/settings.json",
 
     // textlint の設定
-    "textlint.nodePath": "/Users/mos-burger/VS-Code/textlint/node_modules",
-    "textlint.configPath": "/Users/mos-burger/VS-Code/textlint/.textlintrc.json",
     "textlint.run": "onType",
     "textlint.autoFixOnSave": true,
     "textlint.languages": [
