@@ -16,25 +16,12 @@
     └── my-settings.jsonc # VS Code ユーザ設定．区別がつきやすいようにファイル名に my- をつけて拡張子も jsonc に変えてある
 ```
 
-# Windows対応トライ
+## 各種ファイルの配置先
 
-## フォルダ構成
-
-```PlainText
-~ # Windowsの場合は %USERPROFILE%
-└── VS-Code/
-    ├── markdownlint/
-    │   └── .markdownlint.jsonc
-    └── textlint/
-        ├── package.json
-        ├── package-lock.json
-        └── node_modules/ #textlint のプログラム本体
-```
-
-```bat
-mkdir "%USERPROFILE%\VS-Code\markdownlint"
-mkdir "%USERPROFILE%\VS-Code\textlint"
-```
+- ProjectSettings の中身：プロジェクトルート
+- UserSettings の中身：ユーザ用 settings.json と同じフォルダ
+    - Mac の場合は `~/Library/Application Support/Code/User/`
+    - Windows の場合は `%APPDATA%\Code\User\`
 
 # 拡張機能設定
 
@@ -148,7 +135,7 @@ npm ci
 
 #### 設定ファイル
 
-ルートディレクトリに `.textlintrc.json` を作成し，[このファイルの内容](./.textlintrc.json)を記述する．
+ルートディレクトリに `.textlintrc.json` を作成し，[このファイルの内容](./.textlintrc.json) を記述する．
 なおこのファイルはコメントに対応しているので，**拡張子は `.json` のままでコメントを書いてよい**らしい．
 
 #### 検知・修正を有効化する
