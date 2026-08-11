@@ -37,8 +37,9 @@
 
 
     // markdownlint のユーザ設定
-    // この settings.json と同じ場所
-    "markdownlint.configFile": "~/Library/Application Support/Code/User/.markdownlint.jsonc",
+    // MacとWindowsで共通のパスを指定できるようにするため，ホームディレクトリに VS-Code フォルダを作る
+    // 今後ほかにもワークスペースではなくユーザレベルで設定するものがあればこの VS-Code フォルダにまとめる
+    "markdownlint.configFile": "~/VS-Code/.markdownlint.jsonc",
 
     // textlint の設定
     "textlint.run": "onType",
