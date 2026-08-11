@@ -9,7 +9,6 @@
   counter-reset: h2-counter 0 h3-counter 0 h4-counter 0 h5-counter 0 h6-counter 0;
   font-size: 2.2em;
   font-weight: 700;
-  color: #ffffff;
   border-left: 8px solid #0ea5e9;
   border-bottom: 3px solid #0ea5e9;
   padding-left: 16px;
@@ -31,7 +30,6 @@
   counter-reset: h3-counter 0 h4-counter 0 h5-counter 0 h6-counter 0;
   font-size: 1.8em;
   font-weight: 600;
-  color: #e0e0e0;
   border-left: 6px solid #3b82f6;
   border-bottom: 2px solid #3b82f6;
   padding-left: 14px;
@@ -53,7 +51,6 @@
   counter-reset: h4-counter 0 h5-counter 0 h6-counter 0;
   font-size: 1.5em;
   font-weight: 600;
-  color: #c0c0c0;
   border-left: 5px solid #8b5cf6;
   border-bottom: 2px solid #8b5cf6;
   padding-left: 12px;
@@ -75,7 +72,6 @@
   counter-reset: h5-counter 0 h6-counter 0;
   font-size: 1.3em;
   font-weight: 500;
-  color: #a0a0a0;
   border-left: 4px solid #d946ef;
   border-bottom: 1px solid #d946ef;
   padding-left: 10px;
@@ -97,7 +93,6 @@
   counter-reset: h6-counter 0;
   font-size: 1.15em;
   font-weight: 500;
-  color: #808080;
   border-left: 3px solid #f43f5e;
   border-bottom: 1px solid #f43f5e;
   padding-left: 8px;
@@ -118,7 +113,6 @@
   counter-increment: h6-counter;
   font-size: 1.05em;
   font-weight: 500;
-  color: #707070;
   border-left: 3px solid #f59e0b;
   border-bottom: 1px solid #f59e0b;
   padding-left: 8px;
