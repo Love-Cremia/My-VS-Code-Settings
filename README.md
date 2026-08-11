@@ -2,26 +2,31 @@
 
 ```PlainText
 .
-├── ProjectSettings/ # プロジェクトで個別設定する場合のファイル．このフォルダの中身を直接プロジェクトルートに配置する
+├── ProjectSettings/ # プロジェクトで個別設定する場合のファイル
 │   ├── .markdownlint.jsonc
 │   ├── .textlintrc.json
 │   └── .vscode/
 │       ├── settings.json
 │       └── markdown-preview-numbering.css
 └── UserSettings/ # VS Code のマイユーザ設定
-    ├── Backup/ # GitIgnore対象．コマンドでユーザ設定ファイルを差し替えたときのバックアップ
-    │   ├── settings_yyyyMMdd-hhmmss.json
-    │   └── ...
-    ├── .markdownlint.jsonc # ユーザ設定用の markdownlint 設定ファイル
-    └── my-settings.jsonc # VS Code ユーザ設定．区別がつきやすいようにファイル名に my- をつけて拡張子も jsonc に変えてある
+    ├── VS-Code/
+    │   └── .markdownlint.jsonc # ユーザ設定用の markdownlint 設定ファイル
+    ├── my-settings.jsonc # VS Code ユーザ設定．区別がつきやすいようにファイル名に my- をつけて拡張子も jsonc に変えてある
+    └── Backup/ # GitIgnore対象．コマンドでユーザ設定ファイルを差し替えたときのバックアップ
+        ├── settings_yyyyMMdd-hhmmss.json
+        └── ...
 ```
 
 ## 各種ファイルの配置先
 
 - ProjectSettings の中身：プロジェクトルート
-- UserSettings の中身：ユーザ用 settings.json と同じフォルダ
-    - Mac の場合は `~/Library/Application Support/Code/User/`
-    - Windows の場合は `%APPDATA%\Code\User\`
+- UserSettings の中身：
+    - `settings.json`: VS Code で規定されている場所．デフォルトだと
+        - Mac の場合は `~/Library/Application Support/Code/User/`
+        - Windows の場合は `%APPDATA%\Code\User\`
+    - それ以外
+        - `settings.json` でパス指定する必要がある場合に Mac と Windows で共通のパスを指定できるように，かつ散らかるのを防止するため，
+        `~` (Windows の場合は `%USERPROFILE%`) の配下に `VS-Code` というフォルダを作りそこににまとめて格納する．
 
 # 拡張機能設定
 
