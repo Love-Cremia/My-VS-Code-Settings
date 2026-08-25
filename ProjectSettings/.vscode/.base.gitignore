@@ -1,0 +1,19 @@
+# 例えば Python のプロジェクトであれば，
+# GitHub などの標準的な Python 向け gitignore をコピーし，
+# その上部に本ファイルの内容をコピーして使う
+
+# システムファイル
+.DS_Store
+.DS_Store?
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+.Spotlight-V100/
+.Trashes/
+
+# textlint のモジュール
+node_modules/
+
+# Office 一時ファイル
+~$*
