@@ -1,0 +1,76 @@
+# =========================
+# デフォルトの改行コード設定
+# =========================
+# すべてのテキストファイルを、OSを問わず手元でもGit内部でも LF に統一
+* text eol=lf
+
+
+# =========================
+# Windows 専用スクリプト (改行コードを CRLF に固定)
+# =========================
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+*.ps1           text eol=crlf
+*.psm1          text eol=crlf
+*.psd1          text eol=crlf
+*.reg           text eol=crlf
+
+
+# =========================
+# シェルスクリプト等 (改行コードを LF に固定)
+# =========================
+# Windows環境でチェックアウトしてもLFを維持 (CRLFになると実行エラーになるため)
+*.sh            text eol=lf
+*.bash          text eol=lf
+*.zsh           text eol=lf
+
+
+# =========================
+# 画像・メディアファイル (バイナリ指定)
+# =========================
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.webp          binary
+*.ico           binary
+*.svg           text
+*.bmp           binary
+*.tiff          binary
+*.psd           binary
+*.ai            binary
+
+
+# =========================
+# 圧縮・アーカイブファイル (バイナリ指定)
+# =========================
+*.zip           binary
+*.tar           binary
+*.gz            binary
+*.7z            binary
+*.rar           binary
+
+
+# =========================
+# Office & Power BI ファイル (バイナリ指定)
+# =========================
+# Excel
+*.xlsx          binary
+*.xlsm          binary
+*.xls           binary
+*.xltx          binary
+*.xltm          binary
+
+# Word
+*.docx          binary
+*.doc           binary
+*.dotx          binary
+
+# PowerPoint
+*.pptx          binary
+*.ppt           binary
+*.potx          binary
+
+# Power BI
+*.pbix          binary
+*.pbit          binary
