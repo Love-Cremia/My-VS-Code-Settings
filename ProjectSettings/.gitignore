@@ -1,0 +1,63 @@
+# Node modules
+node_modules/
+
+# =========================
+# macOS
+# =========================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# アイコン・リソースフォーク関連
+Icon
+Icon?
+._*
+
+# サムネイルキャッシュ・メタデータ
+.Spotlight-V100
+.Trashes
+
+# ファイル共有・ネットワークドライブ用メタデータ
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# =========================
+# Windows
+# =========================
+# エクスプローラーの表示設定・キャッシュ
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# フォルダのカスタマイズ設定
+desktop.ini
+
+# Windows ショートカット・リサイクル関連
+$RECYCLE.BIN/
+*.lnk
+
+# 一時ファイル・ダンプファイル
+*.stackdump
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# =========================
+# Microsoft Office (Excel, Word, PowerPoint 等)
+# =========================
+# 編集中のオーナーファイル・ロックファイル (例: ~$Book1.xlsx)
+~$*
+
+# 自動回復・バックアップ・一時保存ファイル (例: ~*.tmp, ~*.asd)
+~*.tmp
+~*.wbk
+~*.asd
+
+# 汎用の一時ファイル (Windows/アプリ全般)
+*.tmp
