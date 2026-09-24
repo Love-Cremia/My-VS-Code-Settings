@@ -15,5 +15,11 @@
         // markdownlint による構造チェック・フォーマットを有効化
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
         "editor.formatOnSave": true
-    }
+    },
+
+    // エクスプローラに表示しないもの
+    "files.exclude": {
+        "**/.venv": true
+    },
+
 }

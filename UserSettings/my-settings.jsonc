@@ -29,8 +29,19 @@
         // markdownlint の強固な自動修正は codeActionsOnSave で保存時に強制実行する
         "editor.codeActionsOnSave": {
             "source.fixAll.markdownlint": "explicit"
-        }
+        },
+        // Markdown エディターだけ等幅フォントを使用する
+        // → テーブルをフォーマットしたとき罫線の位置が揃って見える
+        // ただし ASCII Tree 図の記号はズレて表示される
+        // ※ プレビューのコードブロックは全体の "editor.fontFamily" を参照するため，
+        // Markdown 限定にしないと，プレビューにおける ASCII Tree 図の罫線が半角として扱われず見にくくなる
+        "editor.fontFamily": "'BIZ UDGothic', 'ＭＳ ゴシック', 'SF Mono', Menlo, Monaco, 'Osaka-等幅', monospace"
     },
+
+    // Markdown プレビューのフォントは欧文フォントを優先して使用．
+    // → ASCII Tree 図の罫線が半角として扱われて見やすくなる
+    "markdown.preview.fontFamily": "'SF Mono', Consolas, Menlo, Monaco, 'Courier New', monospace",
+
 
     // Markdown All in One のテーブルフォーマットを有効化
     "markdown.extension.tableFormatter.enabled": true,
@@ -82,16 +93,5 @@
 
     // インデントの自動検出を無効化する
     // これにより既存JSONファイルでも，本ファイルで指定しているように規定インデントを4個スペースにできる
-    "editor.detectIndentation": false,
-
-    // エクスプローラに表示しないもの
-    "files.exclude": {
-        "**/.venv": true
-    },
-
-
-    // VS Code のフォント設定
-    "editor.fontFamily": "'Hiragino Sans Mono', 'Osaka-Mono', monospace",
-    "editor.experimental.graphemeClusters": true
-
+    "editor.detectIndentation": false
 }
