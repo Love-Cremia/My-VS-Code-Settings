@@ -3,6 +3,12 @@
         "indent": 4
     },
 
+    "MD013": {
+        "code_blocks": false,
+        "headings": false,
+        "tables": false
+    },
+
     // h1 を1つしか認めない
     "MD025": false
 }
