@@ -11,7 +11,7 @@
 └── UserSettings/ # VS Code のマイユーザ設定
     ├── VS-Code/
     │   └── .markdownlint.jsonc # ユーザ設定用の markdownlint 設定ファイル
-    ├── my-settings.jsonc # VS Code ユーザ設定．区別がつきやすいようにファイル名に my- をつけて拡張子も jsonc に変えてある
+    ├── My-VS-Code-Settings.jsonc # VS Code ユーザ設定．区別がつきやすいようにファイル名を変えて，コメントを付けても警告が出ないように拡張子を jsonc に変えてある
     └── Backup/ # GitIgnore対象．コマンドでユーザ設定ファイルを差し替えたときのバックアップ
         ├── settings_yyyyMMdd-hhmmss.json
         └── ...
@@ -37,6 +37,7 @@
 - Ascii Tree Generator
 - Open in External App
 - Python 系
+- Ruff
 - Markdown All in One
 - markdownlint
 - textlint ※ 前身である vscode-textlint はメンテされていないため NG
