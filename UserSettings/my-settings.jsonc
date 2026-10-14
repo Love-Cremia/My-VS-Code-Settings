@@ -93,5 +93,31 @@
 
     // インデントの自動検出を無効化する
     // これにより既存JSONファイルでも，本ファイルで指定しているように規定インデントを4個スペースにできる
-    "editor.detectIndentation": false
+    "editor.detectIndentation": false,
+
+    // エクスプローラーツリーから消すもの（完全なゴミ・内部キャッシュ）
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.pytest_cache": true,
+        "**/.mypy_cache": true,
+        "**/.ruff_cache": true
+    },
+
+    // ツリーには出すが、全体検索（Ctrl+Shift+F）の結果から除外するもの
+    "search.exclude": {
+        "**/.venv": true,
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/build": true
+    },
+
+    // ファイル監視の対象から外して VS Code を軽量化するもの
+    "files.watcherExclude": {
+        "**/.venv/**": true,
+        "**/node_modules/**": true
+    }
 }
