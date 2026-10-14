@@ -119,5 +119,26 @@
     "files.watcherExclude": {
         "**/.venv/**": true,
         "**/node_modules/**": true
-    }
+    },
+
+    // 1. Python ファイルに対するフォーマッターとして Ruff を指定
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            // 保存時に未使用 import の削除やリントエラーの自動修正を実行
+            "source.fixAll": "explicit",
+            // 保存時に import 文の自動並び替えを実行 (isort 相当)
+            "source.organizeImports": "explicit"
+        }
+    },
+
+    // 2. Pylance の型チェック設定
+    // "off", "basic" (推奨), "strict" から選択可能
+    "python.analysis.typeCheckingMode": "basic",
+
+    // 3. 旧来のリント機能を無効化（重複警告の防止）
+    // 既に black, flake8, autopep8 拡張等を入れている場合は無効化またはアンインストール
+    "python.formatting.provider": "none"
+
 }
