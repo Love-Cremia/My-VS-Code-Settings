@@ -6,7 +6,7 @@ cd "$(dirname "$0")" || exit 1
 # パスの定義
 VSCODE_SETTINGS="$HOME/Library/Application Support/Code/User/settings.json"
 HOME_VSCODE="$HOME/VS-Code"
-GIT_SETTINGS="./UserSettings/my-settings.jsonc"
+GIT_SETTINGS="./UserSettings/My-VS-Code-Settings.jsonc"
 GIT_HOME_VSCODE="./UserSettings/VS-Code"
 BACKUP_DIR="./UserSettings/Backup"
 
@@ -14,8 +14,8 @@ echo "========================================="
 echo "VS Code 設定同期スクリプト"
 echo "========================================="
 echo "同期方向を選択してください:"
-echo "  1) VS Code の設定を Git に保存"
-echo "  2) Git の設定を VS Code に反映"
+echo "  1) ローカル VS Code の設定を Git に保存"
+echo "  2) このプロジェクトにある設定をローカル VS Code に反映"
 echo ""
 read -p "番号を入力 (1 または 2): " CHOICE
 
@@ -34,7 +34,7 @@ if [ "$CHOICE" = "1" ]; then
         exit 1
     fi
 
-    echo "settings.json を my-settings.jsonc にコピーしています..."
+    echo "settings.json を My-VS-Code-Settings.jsonc にコピーしています..."
     # UserSettingsディレクトリが存在しない場合は作成
     mkdir -p "$(dirname "$GIT_SETTINGS")"
     cp "$VSCODE_SETTINGS" "$GIT_SETTINGS"
@@ -83,7 +83,7 @@ elif [ "$CHOICE" = "2" ]; then
 
     # プロジェクトからVS Codeへ設定を反映
     mkdir -p "$(dirname "$VSCODE_SETTINGS")"
-    echo "my-settings.jsonc を settings.json として上書きしています..."
+    echo "My-VS-Code-Settings.jsonc を settings.json として上書きしています..."
     cp "$GIT_SETTINGS" "$VSCODE_SETTINGS"
 
     if [ -d "$GIT_HOME_VSCODE" ]; then
@@ -93,7 +93,6 @@ elif [ "$CHOICE" = "2" ]; then
     fi
 
     echo "同期が完了しました。"
-    pause
     exit 0
 
 else
