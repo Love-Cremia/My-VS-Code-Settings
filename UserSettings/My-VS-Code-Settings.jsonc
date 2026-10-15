@@ -139,6 +139,13 @@
 
     // 3. 旧来のリント機能を無効化（重複警告の防止）
     // 既に black, flake8, autopep8 拡張等を入れている場合は無効化またはアンインストール
-    "python.formatting.provider": "none"
+    "python.formatting.provider": "none",
 
+    // 4. Ruff の設定
+    // 使われていない import 文の警告について，表示はするが保存時に自動修正しないようにする
+    "ruff.configuration": {
+        "lint": {
+            "unfixable": [ "F401" ]
+        }
+    },
 }
