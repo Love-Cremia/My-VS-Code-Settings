@@ -7,7 +7,7 @@ cd /d "%~dp0"
 :: パスの定義
 set "VSCODE_SETTINGS=%APPDATA%\Code\User\settings.json"
 set "HOME_VSCODE=%USERPROFILE%\VS-Code"
-set "GIT_SETTINGS=.\UserSettings\my-settings.jsonc"
+set "GIT_SETTINGS=.\UserSettings\My-VS-Code-Settings.jsonc"
 set "GIT_HOME_VSCODE=.\UserSettings\VS-Code"
 set "BACKUP_DIR=.\UserSettings\Backup"
 
@@ -38,7 +38,7 @@ if not exist "%VSCODE_SETTINGS%" (
     exit /b 1
 )
 
-echo settings.json を my-settings.jsonc にコピーしています...
+echo settings.json を My-VS-Code-Settings.jsonc にコピーしています...
 copy /y "%VSCODE_SETTINGS%" "%GIT_SETTINGS%" >nul
 
 if exist "%HOME_VSCODE%" (
@@ -84,7 +84,7 @@ if exist "%HOME_VSCODE%" (
 
 :: プロジェクトからVS Codeへ設定を反映
 if not exist "%APPDATA%\Code\User" mkdir "%APPDATA%\Code\User"
-echo my-settings.jsonc を settings.json として上書きしています...
+echo My-VS-Code-Settings.jsonc を settings.json として上書きしています...
 copy /y "%GIT_SETTINGS%" "%VSCODE_SETTINGS%" >nul
 
 if exist "%GIT_HOME_VSCODE%" (
