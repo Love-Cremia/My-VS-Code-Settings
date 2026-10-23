@@ -72,6 +72,10 @@
     // JSON ファイルの整形時に、空行があっても保持する
     "json.format.keepLines": true,
 
+    "[javascript]": {
+        "editor.formatOnSave": true,
+    },
+
 
     // 空白文字の表示設定
     // boundary は単語の境界にある空白以外を表示する
@@ -148,4 +152,5 @@
             "unfixable": [ "F401" ]
         }
     },
+    "diffEditor.ignoreTrimWhitespace": false,
 }
