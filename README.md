@@ -139,6 +139,12 @@ npm install --save-dev textlint textlint-rule-preset-ja-spacing
 npm ci
 ```
 
+実行した際に $n$ high severity vulnerabilities といったメッセージが出た場合は以下のコマンドも追加実行することでアップデートをかける：
+
+```shell
+npm audit fix
+```
+
 #### 設定ファイル
 
 ルートディレクトリに `.textlintrc.json` を作成し，[このファイルの内容](./.textlintrc.json) を記述する．
