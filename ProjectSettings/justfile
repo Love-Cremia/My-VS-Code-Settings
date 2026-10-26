@@ -1,0 +1,18 @@
+# デフォルトでタスク一覧を表示
+default:
+    @just --list
+
+# === 以下では pyproject.toml で project.script (エイリアス登録) している前提で例示 ===
+
+# --- Mac 専用コマンド ---
+
+[macos]
+xxx:
+    uv run xxx
+
+# --- Windows 専用コマンド ---
+
+# 変更・差分検知を実行
+[windows]
+yyy:
+    uv run yyy
