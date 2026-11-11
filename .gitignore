@@ -7,10 +7,11 @@ UserSettings/Backup/
 
 ## このリポジトリで作業するとき用の textlint 関係
 ## ※一般のリポジトリでは ignore してはならないが，
-## ここでは ProjectSettings の中に設定を置くので例外的に ignore する
+## 管理対象である ProjectSettings の中に正式な設定を置くので例外的に ignore する
 /package.json
 /package-lock.json
 /.textlintrc.json
+/.markdownlint.jsonc
 
 # Node modules
 node_modules/
