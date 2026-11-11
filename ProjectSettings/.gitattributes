@@ -74,3 +74,19 @@
 # Power BI
 *.pbix          binary
 *.pbit          binary
+
+# =========================
+# VBA Form Binary
+# =========================
+# フォーム用バイナリ（改行コード変換の完全抑止・差分計算の抑止）
+*.frx           binary
+
+# =========================
+# VBE Exported Text Files (CP932 / CRLF)
+# =========================
+# VBEから標準エクスポートされるファイル群
+# - working-tree-encoding: リポジトリ内はUTF-8で保持し，作業ツリー展開時にCP932へ復元（またはCP932のまま正しく差分比較）
+# - eol=crlf: Windows VBEが要求するCRLFを維持
+*.frm           text working-tree-encoding=cp932 eol=crlf
+*.bas           text working-tree-encoding=cp932 eol=crlf
+*.cls           text working-tree-encoding=cp932 eol=crlf
